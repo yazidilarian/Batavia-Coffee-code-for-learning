@@ -1,0 +1,431 @@
+body,
+html,
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary: #9d5c0d;
+  --secondary: #e5890a;
+  --tree: #f7d08a;
+  --four: #fafafa;
+  --side: 9%;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--primary);
+  font-size: 1rem;
+  overflow-x: hidden;
+}
+
+nav {
+  background-color: var(--secondary);
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.3rem var(--side);
+  box-sizing: border-box;
+  z-index: 999;
+}
+
+nav .logo {
+  font-weight: 800;
+}
+
+nav .logo span {
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  transition: 0.3s;
+}
+nav ul li a {
+  text-decoration: none;
+  color: var(--four);
+  padding: 0.5rem;
+  border-radius: 0.7rem;
+}
+
+nav ul li a:hover {
+  color: var(--primary);
+  background-color: #f7d08a;
+}
+
+nav .hamburger-menu {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  /* background-color: blue; */
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav .hamburger-menu span {
+  display: block;
+  width: 100%;
+  height: 20%;
+  background-color: black;
+  transition: 0.5s;
+}
+
+nav .hamburger-menu span:nth-child(1).hamburger-satu {
+  background-color: red;
+  transform-origin: 0;
+  transform: rotate(45deg) translateX(2px) translateY(1px);
+}
+nav .hamburger-menu span:nth-child(2).hamburger-dua {
+  background-color: blue;
+  transform: scale(0) translateX(3px);
+}
+nav .hamburger-menu span:nth-child(3).hamburger-tiga {
+  background-color: yellow;
+  transform-origin: 0;
+  transform: rotate(-45deg) translateX(-2px) translateY(3px);
+}
+
+header {
+  background-image: url(img/background\ header\ resize.jpg);
+  /* filter: brightness(0.4); */
+  height: 100vh;
+}
+
+header .container-brightness {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px 0 20px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.477);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header .container-brightness h1,
+h2 {
+  text-align: center;
+  color: var(--four);
+}
+
+header .container-brightness a img {
+  width: 12rem;
+  margin-top: 3rem;
+}
+
+header .container-brightness h2:nth-child(4) {
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+
+main .tentang-kami {
+  text-align: center;
+  padding: 2rem var(--side) 0;
+  color: var(--four);
+}
+
+main .tentang-kami .quote {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--tree);
+}
+
+main .tentang-kami h1 {
+  text-transform: uppercase;
+}
+
+main .tentang-kami p {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+main .tentang-kami .img-tentang {
+  display: none;
+  margin-top: 3rem;
+  width: 80%;
+  /* border-radius: 1rem; */
+}
+
+main .tentang-kami .row img {
+  /* width: 150rem;
+  height: 20rem; */
+  width: 15rem;
+  /* background: url(/img/row\ tetang\ kami.jpg); */
+  /* background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+  /* border-radius: 3rem; */
+}
+
+main .tentang-kami .row {
+  display: flex;
+  margin-top: 2rem;
+  /* align-items: center; */
+  gap: 2rem;
+  /* align-items: center; */
+}
+.tentang-kami .row p {
+  text-align: center;
+}
+
+main .menu {
+  color: var(--four);
+  display: flex;
+  padding: 7rem var(--side) 0;
+  flex-direction: column;
+  align-items: center;
+  /* margin-bottom: 5rem; */
+}
+
+main .menu h1 {
+  text-transform: uppercase;
+}
+
+main .menu .headermenu {
+  width: 100%;
+  display: flex;
+  /* background-color: red; */
+  justify-content: center;
+  margin-top: 2rem;
+  /* padding-left: 7rem; */
+  transform: translateY(30px);
+}
+
+main .menu .headermenu h2 {
+  text-transform: capitalize;
+  color: var(--tree);
+}
+
+main .menu .headermenu h2::after {
+  content: "";
+  display: block;
+  height: 2px; /* Sesuaikan tinggi garis */
+  background-color: var(--secondary); /* Sesuaikan warna garis */
+  margin-top: 6px; /* Jarak antara elemen dan garis */
+}
+
+main .menu .noncoffee {
+  margin-top: 6rem;
+}
+/* 
+main .menu h2:nth-child(4){
+  margin-top: 200px;
+  justify-content: start;
+} */
+
+main .menu .container-menu-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 0 var(--side);
+  column-gap: 7rem;
+}
+
+main .menu .container-menu-card .menu-card {
+  background-color: var(--secondary);
+  color: var(--tree);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  width: 30rem;
+  height: 13rem;
+  gap: 3rem;
+}
+
+main .menu .container-menu-card .menu-card .content {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding-right: 2rem;
+  box-sizing: border-box;
+  position: relative;
+  left: -3rem;
+}
+
+main .menu .container-menu-card .menu-card .content h3 {
+  color: var(--primary);
+  text-transform: capitalize;
+}
+
+main .menu .container-menu-card .menu-card .content p {
+  text-align: start;
+  /* text-transform: capitalize; */
+}
+
+main .menu .container-menu-card .menu-card img {
+  width: 10rem;
+  position: relative;
+  left: -4rem;
+}
+
+main .kontak {
+  padding: 7rem var(--side) 0;
+  /* background-color: blue; */
+  margin-bottom: 5rem;
+  width: 100%;
+  height: 350px;
+  box-sizing: border-box;
+  color: var(--four);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .kontak .content-kontak {
+  width: auto;
+  height: auto;
+  /* background-color: red; */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+}
+
+main .kontak .header-lokasi1 {
+  text-transform: uppercase;
+  display: none;
+}
+
+main .kontak .content-kontak h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+main .kontak .content-kontak p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+main .kontak .content-kontak a {
+  text-decoration: none;
+  text-align: center;
+}
+
+main .kontak .content-kontak .container-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 var(--side);
+  height: 5rem;
+  color: var(--four);
+  text-transform: capitalize;
+}
+
+/* media screen 900px start */
+@media only screen and (max-width: 900px) {
+  nav ul {
+    padding: 1rem;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--secondary);
+    width: 15rem;
+    height: 100vh;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  nav ul.active {
+    right: 0;
+  }
+
+  nav .hamburger-menu {
+    display: flex;
+  }
+
+  main .tentang-kami .row {
+    flex-direction: column;
+  }
+
+  main .tentang-kami .img-tentang {
+    display: unset;
+  }
+
+  main .tentang-kami .row img {
+    display: none;
+  }
+
+  main .menu .container-menu-card {
+    margin-top: 3rem;
+  }
+  main .menu .container-menu-card .menu-card {
+    flex-direction: column;
+    height: 32rem;
+    gap: 1rem;
+    /* border-radius: 3rem; */
+  }
+
+  main .menu .container-menu-card .menu-card img {
+    position: static;
+    width: 15rem;
+  }
+
+  main .menu .container-menu-card .menu-card .content {
+    /* gap: 0; */
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    left: 0;
+  }
+
+  main .menu .container-menu-card .menu-card .content p {
+    text-align: center;
+  }
+
+  main #kontak .container-kontak {
+    flex-direction: column;
+  }
+
+  main .kontak {
+    height: 700px;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  main .kontak .header-lokasi1 {
+    display: block;
+  }
+
+  main .kontak .content-kontak h1:nth-child(1) {
+    display: none;
+  }
+}
+/* media screen 900px end */
+
+@media only screen and (max-width: 850px) {
+  main .tentang-kami {
+    padding-top: 5rem;
+  }
+
+  main .tentang-kami q {
+    display: none;
+  }
+
+  main .tentang-kami .row {
+    margin-top: 0;
+  }
+}
